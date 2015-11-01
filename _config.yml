@@ -37,7 +37,7 @@ unpublished:       false
 
 # Plugins
 whitelist:         []
-gems:              []
+gems:              ["emoji_for_jekyll"]
 
 # Conversion
 markdown:          kramdown
