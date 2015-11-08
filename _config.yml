@@ -22,7 +22,7 @@ encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Site settings
-title:             Блог об IT
+title:             batazor.ru
 email:             batazor111@gmail.com
 description:       Блог о программировании, IT и DevOps
 url:               "http://batazor.ru"
