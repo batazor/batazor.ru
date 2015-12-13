@@ -1,2 +1,2 @@
 # my-blog
-Blog about me, programming and DevOps
+Blog about me. Main themes: programming, DevOps and etc.
