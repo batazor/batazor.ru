@@ -8,26 +8,32 @@
 # Where things are
 source:       ./source
 destination:  ./_site
-# plugins_dir:  ./_plugins
-# layouts_dir:  ./_layouts
-# data_dir:     ./_data
-# includes_dir: ./_includes
-# collections:  null
 
 # Handling Reading
 safe:         false
 exclude:      []
-keep_files:   [".git"]
+keep_files:   [".git", "LICENSE", "README.md"]
 encoding:     "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 # Site settings
+name:              Логин Виктор
 title:             batazor.ru
-email:             batazor111@gmail.com
-description:       Блог о программировании, IT и DevOps
+description:       "Блог об программировании, IT и DevOps"
+meta_description:  "Блог об программировании, IT и DevOps"
+meta_keywords:     "batazor, programming, DevOps, Docker, Kubernetes, Node.js, back-end, Логин Виктор"
+google_analytics:  "UA-47442705-2"
 url:               "http://batazor.ru"
-twitter_username:  batazor
-github_username:   batazor
+rss_path:          source/
+author:
+  name:            "Логин Виктор"
+  image:           /assets/images/author.jpg
+  email:           batazor111@gmail.com
+  url:             "http://batazor.ru"
+  twitter:         "https://twitter.com/batazor"
+  github:          "https://github.com/batazor/"
+  vk:              "http://vk.com/batazor"
+  codepen:         "http://codepen.io/batazor/"
 
 # Filtering Content
 show_drafts:       null
@@ -62,7 +68,26 @@ comments:      true
 quiet:    false
 defaults: []
 
-google_analytics: UA-47442705-2
+# Plugin: jekyll-assets
+assets:
+  dirname: /assets
+  baseurl: /assets/ # change to /assets/
+  sources:
+    - assets/images
+    - assets/fonts
+    - assets/css
+    - assets/js
+  cache: true
+  gzip: [ text/css, application/javascript ]
+
+# Compress HTML
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  ignore:
+    envs: all
 
 # Markdown Processors
 rdiscount:
