@@ -16,6 +16,10 @@ body {
 }
 
 // HEADER
+#nav-mobile a, #mobile-bar a {
+	font-size: 1.5rem;
+}
+
 .logo {
 	margin: 2.7em auto;
 	border: 0.5em solid rgba(27, 196, 163, 0.5);
