@@ -1,0 +1,12 @@
+---
+layout: default
+title: Логин Виктор
+description: Меня зовут, Логин Виктор (batazor), я прораммист и студент Приокского Государственного Университета.
+slug: home
+---
+
+{% for post in paginator.posts %}
+  {% include article.html %}
+{% endfor %}
+
+{% include pagination.html %}

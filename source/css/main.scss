@@ -9,10 +9,17 @@ $white: #ecf0f1;
 
 // BASIK
 body {
+	display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 	background: #34495e;
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: $white;
 	font-size: 100%;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 // HEADER
@@ -25,4 +32,9 @@ body {
 	border: 0.5em solid rgba(27, 196, 163, 0.5);
 	border-radius: 50%;
 	background-color: rgba(0,0,0,.22);
+}
+
+// FOOTER
+footer > .footer-copyright {
+	padding: 0 1.5em;
 }

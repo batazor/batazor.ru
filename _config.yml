@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Where things are
-# source:       .
-# destination:  ./_site
+source:       ./source
+destination:  ./_site
 # plugins_dir:  ./_plugins
 # layouts_dir:  ./_layouts
 # data_dir:     ./_data
@@ -37,11 +37,11 @@ unpublished:       false
 
 # Plugins
 whitelist:         []
-gems:              ["emoji_for_jekyll"]
+gems:              ["emoji_for_jekyll", "jekyll-paginate"]
 
 # Conversion
 markdown:          kramdown
-highlighter:       rouge
+highlighter:       pygments
 lsi:               false
 excerpt_separator: "\n\n"
 incremental:       false
@@ -53,12 +53,16 @@ host:              127.0.0.1
 baseurl:           ""
 
 # Outputting
-permalink:     date
-paginate_path: /page:num
+paginate:      2
+permalink:     /:title/
+paginate_path: "/page/:num"
 timezone:      null
+comments:      true
 
 quiet:    false
 defaults: []
+
+google_analytics: UA-47442705-2
 
 # Markdown Processors
 rdiscount:
