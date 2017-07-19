@@ -1,6 +1,6 @@
 FROM nginx:1.13-alpine
 
-RUN apk add --no-cache certbot && \
+RUN apk add --no-cache certbot openssl && \
     mkdir /etc/letsencrypt
 
 WORKDIR /usr/share/nginx/html
