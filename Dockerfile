@@ -10,4 +10,4 @@ ADD ./root /
 COPY ./ ./
 RUN rm -rf root
 
-CMD ["supervisord", "--nodaemon", "-c", "/etc/supervisord.conf"]
+CMD ["/run.sh"]
