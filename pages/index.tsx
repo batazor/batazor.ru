@@ -50,7 +50,7 @@ const Home: NextPage = () => {
       <body>
         <div className="content">
           <header id="header">
-            <img src="./batazor.png" className="logo" alt="logo batazor" />
+            <img src="./batazor.png" width={290} height={350} alt="logo batazor" />
           </header>
           <article className="about">
             <h1>Victor Login @batazor</h1>
