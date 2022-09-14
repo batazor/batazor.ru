@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@charset "utf-8";
+
+/*************************************************
+BASIK
+*************************************************/
+
+html, body {
+  display: flex;
+  flex: 1;
+
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  justify-content: center;
+  margin: 0;
+
+  background: #34495e;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  color: #ecf0f1;
+  font-size: 100%;
+  text-shadow: 1.0606601717798214px 1.0606601717798212px 0 #2b3d4f, 2.121320343559643px 2.1213203435596424px 0 #2b3d4f;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 0.5em solid rgba(27, 196, 163, 0.5);
+  padding-right: 3em;
+}
+
+#header {
+  margin: 0;
+}
+
+.social-buttons {
+  font-size: 3em;
+  color: #ecf0f1;
+  text-decoration: none;
+
+  cursor: pointer;
+  margin-left: 0.3em;
+}
+
+.about {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+/*************************************************
+Support
+*************************************************/
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "batazor.ru",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "$(npm bin)/next dev",
+    "build": "$(npm bin)/next build",
+    "start": "$(npm bin)/next start",
+    "lint": "$(npm bin)/next lint",
+    "sitemap": "$(npm bin)/next-sitemap --config config/sitemap.config.js"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-brands-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "next": "12.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.23.1",
+    "eslint-config-next": "12.3.0",
+    "typescript": "4.8.3"
+  }
+}

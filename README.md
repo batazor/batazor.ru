@@ -2,8 +2,8 @@
 
 Source site batazor.ru
 
-### Getting start
+## Getting Started
 
-```
-docker run --name batazor.ru --restart=always -p 80:80 -p 443:443 -d batazor/batazor.ru
+```bash
+$> npm run dev
 ```
