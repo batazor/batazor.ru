@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "$(npm bin)/next dev",
     "build": "$(npm bin)/next build",
+    "export": "$(npm bin)/next export",
     "start": "$(npm bin)/next start",
     "lint": "$(npm bin)/next lint",
     "sitemap": "$(npm bin)/next-sitemap --config config/sitemap.config.js"

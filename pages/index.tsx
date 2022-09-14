@@ -4,6 +4,7 @@ import {Fragment} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
       <body>
         <div className="content">
           <header id="header">
-            <img src="batazor.png" className="logo" alt="logo batazor" />
+            <img src="./batazor.png" className="logo" alt="logo batazor" />
           </header>
           <article className="about">
             <h1>Victor Login @batazor</h1>
