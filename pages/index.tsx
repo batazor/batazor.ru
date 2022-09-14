@@ -4,7 +4,7 @@ import {Fragment} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
-import { NextSeo, BreadcrumbJsonLd } from "next-seo"
+import { NextSeo, SocialProfileJsonLd } from "next-seo"
 
 const Home: NextPage = () => {
   return (
@@ -19,10 +19,10 @@ const Home: NextPage = () => {
 
       <NextSeo
         title="Welcome"
-        description="My personal page"
+        description="Login Viktor's a software developer. This page contains contact information and links to my social media profiles."
         openGraph={{
           title: "Welcome",
-          description: "My personal page",
+          description: "Login Viktor's a software developer. This page contains contact information and links to my social media profiles.",
           type: "article",
           article: {
             publishedTime: "2021-08-01T05:00:00.000Z",
@@ -36,24 +36,15 @@ const Home: NextPage = () => {
         }}
       />
 
-      <BreadcrumbJsonLd
-          itemListElements={[
-            {
-              position: 1,
-              name: 'GitHab',
-              item: 'https://github.com/batazor',
-            },
-            {
-              position: 2,
-              name: 'Twitter',
-              item: 'https://twitter.com/batazor',
-            },
-            {
-              position: 3,
-              name: 'LinkedIn',
-              item: 'https://linkedin.com/in/batazor',
-            },
-          ]}
+      <SocialProfileJsonLd
+        type="Person"
+        name="Viktor Login"
+        url="https://batazor.ru"
+        sameAs={[
+          'https://github.com/batazor',
+          'https://twitter.com/batazor',
+          'https://www.linkedin.com/in/batazor/',
+        ]}
       />
 
       <body>
