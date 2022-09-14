@@ -1,5 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
-const config = {
+module.exports = {
+    distDir: 'docs',
     siteUrl: process.env.SITE_URL || 'https://batazor.ru',
     generateRobotsTxt: true,
     // optional
@@ -7,5 +8,3 @@ const config = {
         additionalSitemaps: [],
     },
 }
-
-module.exports = config
