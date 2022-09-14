@@ -4,7 +4,7 @@ import {Fragment} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
-import Image from "next/image";
+import { NextSeo, BreadcrumbJsonLd } from "next-seo"
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +16,45 @@ const Home: NextPage = () => {
         <meta name="description" content="Entrypoint: Логин Виктор (@batazor)." />
         <meta name="theme-color" content="#ffffff" />
       </Head>
+
+      <NextSeo
+        title="Welcome"
+        description="My personal page"
+        openGraph={{
+          title: "Welcome",
+          description: "My personal page",
+          type: "article",
+          article: {
+            publishedTime: "2021-08-01T05:00:00.000Z",
+            modifiedTime: "2021-08-01T05:00:00.000Z",
+            section: "batazor",
+            authors: [
+              "https://batazor.ru",
+            ],
+            tags: [ "batazor" ],
+          }
+        }}
+      />
+
+      <BreadcrumbJsonLd
+          itemListElements={[
+            {
+              position: 1,
+              name: 'GitHab',
+              item: 'https://github.com/batazor',
+            },
+            {
+              position: 2,
+              name: 'Twitter',
+              item: 'https://twitter.com/batazor',
+            },
+            {
+              position: 3,
+              name: 'LinkedIn',
+              item: 'https://linkedin.com/in/batazor',
+            },
+          ]}
+      />
 
       <body>
         <div className="content">
