@@ -5,6 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
 import { NextSeo, SocialProfileJsonLd } from "next-seo"
+import Image from 'next/future/image'
 
 const Home: NextPage = () => {
   return (
@@ -50,7 +51,7 @@ const Home: NextPage = () => {
       <body>
         <div className="content">
           <header id="header">
-            <img src="./batazor.png" width={290} height={350} alt="logo batazor" />
+            <Image src={'./batazor.png'} alt="Viktor Login" width={290} height={350} />
           </header>
           <article className="about">
             <h1>Victor Login @batazor</h1>
