@@ -4,11 +4,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   generateEtags: true,
-  images: {
-    loader: 'custom',
-    domains: [],
-    formats: ['image/avif', 'image/webp'],
-  },
 }
 
 module.exports = nextConfig
