@@ -11,7 +11,7 @@ specifiers:
   eslint: 8.44.0
   eslint-config-next: 12.3.4
   next: 12.3.4
-  next-seo: ^5.5.0
+  next-seo: ^5.15.0
   next-sitemap: ^3.1.55
   react: 18.2.0
   react-dom: 18.2.0
