@@ -1,8 +1,9 @@
 {
   "extends": ["config:base"],
   "rangeStrategy": "bump",
-  "baseBranches": ["master"],
+  "baseBranches": ["main"],
   "automerge": true,
+  "commitBody": "Signed-off-by: {{{gitAuthor}}}",
   "major": {
     "automerge": false
   }
