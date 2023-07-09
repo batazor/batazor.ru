@@ -6,8 +6,8 @@ specifiers:
   '@fortawesome/free-solid-svg-icons': ^6.2.0
   '@fortawesome/react-fontawesome': ^0.2.0
   '@types/node': 18.16.19
-  '@types/react': 18.0.20
-  '@types/react-dom': 18.0.6
+  '@types/react': 18.2.14
+  '@types/react-dom': 18.2.6
   eslint: 8.44.0
   eslint-config-next: 12.3.4
   next: 12.3.4
@@ -29,8 +29,8 @@ dependencies:
 
 devDependencies:
   '@types/node': 18.16.19
-  '@types/react': 18.0.20
-  '@types/react-dom': 18.0.6
+  '@types/react': 18.2.14
+  '@types/react-dom': 18.2.6
   eslint: 8.44.0
   eslint-config-next: 12.3.4_c6scop6gobf6637sntyzfiffg4
   next-sitemap: 3.1.55_next@12.3.4
@@ -315,14 +315,14 @@ packages:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
 
-  /@types/react-dom/18.0.6:
-    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+  /@types/react-dom/18.2.6:
+    resolution: {integrity: sha512-2et4PDvg6PVCyS7fuTc4gPoksV58bW0RwSxWKcPRcHZf0PRUGq03TKcD/rUHe3azfV6/5/biUBJw+HhCQjaP0A==}
     dependencies:
-      '@types/react': 18.0.20
+      '@types/react': 18.2.14
     dev: true
 
-  /@types/react/18.0.20:
-    resolution: {integrity: sha512-MWul1teSPxujEHVwZl4a5HxQ9vVNsjTchVA+xRqv/VYGCuKGAU6UhfrTdF5aBefwD1BHUD8i/zq+O/vyCm/FrA==}
+  /@types/react/18.2.14:
+    resolution: {integrity: sha512-A0zjq+QN/O0Kpe30hA1GidzyFjatVvrpIvWLxD+xv67Vt91TWWgco9IvrJBkeyHm1trGaFS/FSGqPlhyeZRm0g==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
