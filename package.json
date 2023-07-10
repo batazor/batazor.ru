@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "$(npm bin)/next dev",
-    "build": "$(npm bin)/next build",
-    "export": "$(npm bin)/next export",
-    "start": "$(npm bin)/next start",
-    "lint": "$(npm bin)/next lint",
-    "sitemap": "$(npm bin)/next-sitemap --config config/sitemap.config.js"
+    "dev": "npx next dev",
+    "build": "npx next build",
+    "export": "npx next export",
+    "start": "npx next start",
+    "lint": "npx next lint",
+    "sitemap": "npx next-sitemap --config config/sitemap.config.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
