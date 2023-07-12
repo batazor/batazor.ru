@@ -3,8 +3,5 @@
   "rangeStrategy": "bump",
   "baseBranches": ["main"],
   "automerge": false,
-  "commitBody": "Signed-off-by: {{{gitAuthor}}}",
-  "major": {
-    "automerge": false
-  }
+  "commitBody": "Signed-off-by: {{{gitAuthor}}}"
 }
