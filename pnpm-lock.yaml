@@ -12,7 +12,7 @@ specifiers:
   eslint-config-next: ^13.5.4
   next: ^13.5.4
   next-seo: ^6.1.0
-  next-sitemap: ^4.1.8
+  next-sitemap: ^4.2.3
   react: 18.2.0
   react-dom: 18.2.0
   typescript: ^5.1.6
@@ -33,7 +33,7 @@ devDependencies:
   '@types/react-dom': 18.2.7
   eslint: 8.46.0
   eslint-config-next: 13.5.4_7haavtekmro7ptbnqmctjaodju
-  next-sitemap: 4.1.8_next@13.5.4
+  next-sitemap: 4.2.3_next@13.5.4
   typescript: 5.1.6
 
 packages:
@@ -150,10 +150,6 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
-    dev: true
-
-  /@next/env/13.4.9:
-    resolution: {integrity: sha512-vuDRK05BOKfmoBYLNi2cujG2jrYbEod/ubSSyqgmEx9n/W3eZaJQdRNhTfumO+qmq/QTzLurW487n/PM/fHOkw==}
     dev: true
 
   /@next/env/13.5.4:
@@ -1175,17 +1171,6 @@ packages:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: true
 
-  /fast-glob/3.2.12:
-    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
-    dev: true
-
   /fast-glob/3.3.0:
     resolution: {integrity: sha512-ChDuvbOypPuNjO8yIDf36x7BlZX1smcUMTTcyoIjycexOxd6DFsKsg21qVBzEmr3G7fUKIRy2/psii+CIUt7FA==}
     engines: {node: '>=8.6.0'}
@@ -1843,16 +1828,16 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-sitemap/4.1.8_next@13.5.4:
-    resolution: {integrity: sha512-XAXpBHX4o89JfMgvrm0zimlZwpu2iBPXHpimJMUrqOZSc4C2oB1Lv89mxuVON9IE8HOezaM+w4GjJxcYCuGPTQ==}
+  /next-sitemap/4.2.3_next@13.5.4:
+    resolution: {integrity: sha512-vjdCxeDuWDzldhCnyFCQipw5bfpl4HmZA7uoo3GAaYGjGgfL4Cxb1CiztPuWGmS+auYs7/8OekRS8C2cjdAsjQ==}
     engines: {node: '>=14.18'}
     hasBin: true
     peerDependencies:
       next: '*'
     dependencies:
       '@corex/deepmerge': 4.0.43
-      '@next/env': 13.4.9
-      fast-glob: 3.2.12
+      '@next/env': 13.5.4
+      fast-glob: 3.3.0
       minimist: 1.2.8
       next: 13.5.4_biqbaboplfbrettd7655fr4n2y
     dev: true
