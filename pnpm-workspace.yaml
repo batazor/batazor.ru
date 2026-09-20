@@ -1,3 +1,8 @@
 allowBuilds:
   sharp: true
   esbuild: true
+
+overrides:
+  # satori pins fflate 0.7.3, which has a DoS advisory (GHSA-px8p-9vwx-vf98).
+  # 0.7.5 is the patched release in the same minor line.
+  fflate: '>=0.7.5'
