@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="batazor">
+  <style>
+    :root { color-scheme: light dark; }
+    .bg { fill: #16202b; }
+    .fg { fill: #2ee0bb; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #0b7a66; }
+      .fg { fill: #f4f7fa; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14" />
+  <path class="fg" d="M20 13h7v14.4a10.6 10.6 0 0 1 7.6-3.1c6.9 0 11.9 5.4 11.9 13.4S41.5 51 34.6 51a10.6 10.6 0 0 1-7.9-3.4V50h-6.7V13Zm12.9 31.6c4 0 6.7-3 6.7-6.9s-2.7-6.9-6.7-6.9-6.7 3-6.7 6.9 2.7 6.9 6.7 6.9Z" />
+</svg>

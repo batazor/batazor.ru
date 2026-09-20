@@ -1,7 +1,20 @@
 {
-  "extends": ["config:base"],
-  "rangeStrategy": "bump",
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended", ":dependencyDashboard"],
   "baseBranches": ["main"],
+  "rangeStrategy": "bump",
   "automerge": false,
-  "commitBody": "Signed-off-by: {{{gitAuthor}}}"
+  "lockFileMaintenance": { "enabled": true },
+  "packageRules": [
+    {
+      "description": "Group Astro and its official integrations into one PR.",
+      "matchPackageNames": ["astro", "@astrojs/**"],
+      "groupName": "astro"
+    },
+    {
+      "description": "Group Tailwind packages into one PR.",
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/**"],
+      "groupName": "tailwind"
+    }
+  ]
 }

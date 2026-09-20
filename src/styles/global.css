@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+/* Opt into class-based dark mode so the toggle can override the OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Carried over from the original design: slate base, teal accent. */
+  --color-ink-50: #f4f7fa;
+  --color-ink-200: #c7d2dd;
+  --color-ink-400: #7f93a8;
+  --color-ink-500: #566a7e;
+  --color-ink-700: #2b3d4f;
+  --color-ink-800: #22303e;
+  --color-ink-900: #16202b;
+
+  --color-accent-400: #2ee0bb;
+  --color-accent-500: #1bc4a3;
+  --color-accent-600: #12a186;
+  --color-accent-700: #0b7a66;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply text-ink-900 antialiased;
+    background-color: #eaf0f4;
+    /* Variant B - mesh: three soft colour fields, no texture. */
+    background-image:
+      radial-gradient(48rem 38rem at 8% 6%, rgba(27, 196, 163, 0.28), transparent 60%),
+      radial-gradient(42rem 34rem at 92% 88%, rgba(59, 130, 190, 0.22), transparent 62%),
+      radial-gradient(38rem 30rem at 72% 8%, rgba(255, 255, 255, 0.9), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  html.dark body {
+    @apply bg-ink-900 text-ink-50;
+    background-image:
+      radial-gradient(
+        60rem 40rem at 15% 20%,
+        color-mix(in oklab, var(--color-accent-500) 14%, transparent),
+        transparent 70%
+      ),
+      radial-gradient(
+        45rem 35rem at 85% 85%,
+        color-mix(in oklab, var(--color-accent-600) 8%, transparent),
+        transparent 70%
+      );
+  }
+
+  :focus-visible {
+    @apply outline-accent-500 rounded-sm outline-2 outline-offset-4;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Staggered entrance. Each element sets its own --reveal-delay. */
+  .reveal {
+    animation: reveal 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: var(--reveal-delay, 0ms);
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Accent bloom behind the portrait plinth. */
+  .portrait-glow {
+    position: absolute;
+    inset: -12%;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle,
+      color-mix(in oklab, var(--color-accent-500) 28%, transparent) 0%,
+      transparent 68%
+    );
+    filter: blur(1.5rem);
+    z-index: -1;
+  }
+
+  /* The source art is 290px wide, so it is never rendered larger than that.
+     A whisper of contrast keeps it from looking washed out inside the frame. */
+  .portrait {
+    max-width: 290px;
+    filter: contrast(1.04) saturate(1.02);
+  }
+}

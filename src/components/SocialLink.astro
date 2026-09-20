@@ -1,0 +1,22 @@
+---
+import Icon, { type IconName } from './Icon.astro'
+
+interface Props {
+  href: string
+  label: string
+  name: IconName
+}
+
+const { href, label, name } = Astro.props
+---
+
+<a
+  href={href}
+  rel="me noopener noreferrer"
+  target="_blank"
+  aria-label={label}
+  title={label}
+  class="group border-ink-200 text-ink-700 hover:border-accent-500 hover:text-accent-600 dark:border-ink-700 dark:text-ink-200 dark:hover:border-accent-400 dark:hover:text-accent-400 inline-flex size-12 items-center justify-center rounded-xl border transition-[color,border-color,transform] duration-200 hover:-translate-y-0.5"
+>
+  <Icon name={name} class="size-5 transition-transform duration-200 group-hover:scale-110" />
+</a>

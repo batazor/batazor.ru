@@ -1,0 +1,20 @@
+[
+  {
+    "name": "whiteout-survival-autopilot",
+    "url": "https://github.com/batazor/whiteout-survival-autopilot",
+    "description": "Autopilot for whiteout survival",
+    "stars": 41
+  },
+  {
+    "name": "microservice-template-ddd",
+    "url": "https://github.com/batazor/microservice-template-ddd",
+    "description": "Golnag microservice-template by DDD",
+    "stars": 34
+  },
+  {
+    "name": "fsme",
+    "url": "https://github.com/batazor/fsme",
+    "description": "Finite State Machine Engine for Go",
+    "stars": 10
+  }
+]

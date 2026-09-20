@@ -1,0 +1,38 @@
+---
+import type { Repo } from '../lib/github'
+
+interface Props {
+  repo: Repo
+}
+
+const { repo } = Astro.props
+---
+
+<a
+  href={repo.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group -mx-3 flex flex-col gap-0.5 rounded-lg px-3 py-2 transition-colors duration-200 hover:bg-white/60 dark:hover:bg-white/[0.04]"
+>
+  <span class="flex items-baseline gap-2">
+    <span class="group-hover:text-accent-700 dark:group-hover:text-accent-400 font-semibold">
+      {repo.name}
+    </span>
+
+    <!-- Leader dots carry the eye across to the count, the way a contents page does. -->
+    <span
+      class="border-ink-200 dark:border-ink-700 min-w-4 flex-1 translate-y-[-0.2em] border-b border-dotted"
+      aria-hidden="true"
+    ></span>
+
+    <span class="text-ink-500 dark:text-ink-400 text-sm tabular-nums">
+      <span aria-hidden="true">★</span>
+      {repo.stars}
+      <span class="sr-only">stars</span>
+    </span>
+  </span>
+
+  {repo.description && (
+    <span class="text-ink-500 dark:text-ink-400 truncate text-sm">{repo.description}</span>
+  )}
+</a>

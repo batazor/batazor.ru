@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets'
+import avatar from '../assets/avatar.png'
+import Base from '../layouts/Base.astro'
+import RepoCard from '../components/RepoCard.astro'
+import SocialLink from '../components/SocialLink.astro'
+import ThemeToggle from '../components/ThemeToggle.astro'
+import { SITE, SOCIALS } from '../consts'
+import { fetchTopRepos } from '../lib/github'
+
+const repos = await fetchTopRepos()
+---
+
+<Base title={`${SITE.title} ${SITE.handle}`}>
+  <ThemeToggle />
+
+  <main class="mx-auto flex min-h-dvh max-w-4xl items-center justify-center px-6 py-16">
+    <div class="flex flex-col items-center gap-10 text-center sm:flex-row sm:items-start sm:gap-12 sm:text-left">
+      <!-- The portrait is a 290px original, so it sits on a plinth rather than being
+           stretched: the frame and glow give it presence without any upscaling. -->
+      <figure class="reveal reveal-1 relative shrink-0" style="--reveal-delay: 0ms">
+        <div class="portrait-glow" aria-hidden="true"></div>
+        <div class="border-ink-200 dark:border-ink-700 relative overflow-hidden rounded-2xl border bg-white/40 p-3 backdrop-blur-sm dark:bg-white/[0.03]">
+          <Image
+            src={avatar}
+            alt={`Portrait of ${SITE.title}`}
+            loading="eager"
+            fetchpriority="high"
+            class="portrait w-[200px] sm:w-[240px]"
+          />
+        </div>
+      </figure>
+
+      <div class="border-ink-200 dark:border-ink-700 flex flex-col items-center gap-5 self-stretch sm:items-start sm:border-l sm:pl-12">
+        <div class="space-y-2">
+          <h1
+            class="reveal text-4xl font-extrabold tracking-tight text-balance sm:text-5xl"
+            style="--reveal-delay: 60ms"
+          >
+            {SITE.title}
+          </h1>
+          <p
+            class="reveal text-accent-700 dark:text-accent-400 text-lg font-semibold"
+            style="--reveal-delay: 120ms"
+          >
+            {SITE.handle}
+          </p>
+          <p class="reveal text-ink-500 dark:text-ink-200 text-base" style="--reveal-delay: 180ms">
+            {SITE.tagline}
+          </p>
+        </div>
+
+        <nav aria-label="Social profiles" class="reveal" style="--reveal-delay: 240ms">
+          <ul class="flex items-center gap-3">
+            {SOCIALS.map((social) => (
+              <li>
+                <SocialLink href={social.href} label={social.label} name={social.id} />
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {repos.length > 0 && (
+          <section
+            class="reveal w-full max-w-sm text-left"
+            style="--reveal-delay: 300ms"
+            aria-labelledby="repos-heading"
+          >
+            <h2
+              id="repos-heading"
+              class="text-ink-500 dark:text-ink-400 mb-2 text-xs font-semibold tracking-widest uppercase"
+            >
+              Open source
+            </h2>
+            <ul class="flex flex-col gap-1">
+              {repos.map((repo) => (
+                <li>
+                  <RepoCard repo={repo} />
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
+    </div>
+  </main>
+</Base>
